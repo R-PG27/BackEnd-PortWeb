@@ -3,22 +3,37 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.portfolio.argprograma.Security.Dto;
+package com.portfolio.argprograma.Dto;
 
 import javax.validation.constraints.NotBlank;
 
 public class dtoEducacion {
+
+    @NotBlank
+    private String imgEdu;
     @NotBlank
     private String nombreEdu;
     @NotBlank
     private String descripcionEdu;
+    @NotBlank
+    private String yearsEdu;
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreEdu, String descripcionEdu) {
+    public dtoEducacion(String imgEdu, String nombreEdu, String descripcionEdu, String yearsEdu) {
+        this.imgEdu = imgEdu;
         this.nombreEdu = nombreEdu;
         this.descripcionEdu = descripcionEdu;
+        this.yearsEdu = yearsEdu;
+    }
+
+    public String getImgEdu() {
+        return imgEdu;
+    }
+
+    public void setImgEdu(String imgEdu) {
+        this.imgEdu = imgEdu;
     }
 
     public String getNombreEdu() {
@@ -36,6 +51,15 @@ public class dtoEducacion {
     public void setDescripcionEdu(String descripcionEdu) {
         this.descripcionEdu = descripcionEdu;
     }
+
+    public String getYearsEdu() {
+        return yearsEdu;
+    }
+
+    public void setYearsEdu(String yearsEdu) {
+        this.yearsEdu = yearsEdu;
+    }
+
     
     
 }
